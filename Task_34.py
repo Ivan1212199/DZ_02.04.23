@@ -11,3 +11,19 @@
     **Вывод:** Парам пам-пам
 """
 
+def poems(str):
+    str = str.split()
+    MazF = []
+    for word in str:
+        sum = 0
+        for i in word:
+            if i in 'оооууйеее':
+                sum += 1
+        MazF.append(sum)
+    return len(MazF) == MazF.count(MazF[0])
+
+Bit = str(input("Задай ритм, прокачай пати: "))
+if poems(Bit):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
